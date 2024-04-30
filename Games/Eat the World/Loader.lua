@@ -118,10 +118,7 @@ local function auto(option, bool)
         while auto_grab do
             local path = player.PlayerGui.ScreenGui.MapCountdown.Clock
             if path.Text == "0:00" or path.text == "0:01" then wait(10) else
-                local args = {
-                    [1] = false,
-                    [2] = false
-                }
+                local args = {[1] = false;[2] = false;}
                 game:GetService("Players").LocalPlayer.Character.Events.Grab:FireServer(unpack(args))
             end
             wait(.1)
@@ -225,7 +222,7 @@ misc:Toggle({
 })
 
 misc:Toggle({
-    "Auto Eggs";
+    Name = "Auto Eggs";
     Callback = function()
         auto("egg", bool)
     end;
