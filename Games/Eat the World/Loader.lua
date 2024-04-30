@@ -201,14 +201,14 @@ local sell = ui:NewTab({
 sell:Input({
     Name = "Amount";
     Default = "1000";
-    Callback = function()
-        getgenv().amount = tonumber(value)
+    Callback = function(raw)
+        getgenv().amount = tonumber(raw)
     end;
 })
 
 sell:Toggle({
     Name = "Auto Sell";
-    Callback = function()
+    Callback = function(bool)
         auto("sell", bool)
     end;
 })
@@ -216,21 +216,21 @@ sell:Toggle({
 
 misc:Toggle({
     Name = "Auto Cubes";
-    Callback = function()
+    Callback = function(bool)
         auto("cube", bool)
     end;
 })
 
 misc:Toggle({
     Name = "Auto Eggs";
-    Callback = function()
+    Callback = function(bool)
         auto("egg", bool)
     end;
 })
 
 misc:Toggle({
     Name = "Auto unragdoll";
-    Callback = function()
+    Callback = function(bool)
         auto("stun", bool)
     end;
 })
@@ -259,14 +259,14 @@ misc:Button({
 
 home:Toggle({
     Name = "Auto Grab";
-    Callback = function()
+    Callback = function(bool)
         auto("grab", bool)
     end;
 })
 
 home:Toggle({
     Name = "Auto Eat";
-    Callback = function()
+    Callback = function(bool)
         auto("eat", bool)
     end;
 })
@@ -274,14 +274,14 @@ home:Toggle({
 home:Input({
     Name = "Spin Speed";
     Default = "2";
-    Callback = function()
-        getgenv().speed = tonumber(value)
+    Callback = function(raw)
+        getgenv().speed = tonumber(raw)
     end;
 })
 
 home:Toggle({
     Name = "Spin";
-    Callback = function()
+    Callback = function(bool)
         spin(tonumber(getgenv().speed), bool)
     end;
 })
