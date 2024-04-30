@@ -7,11 +7,11 @@ version 1.2
 ## Project Loader:
 replace "_PROJECTNAME_" with the project name
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireFr/Ouxie/main/Loader-Handler.lua"))():load(_PROJECTNAME_, config)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Loader-Handler.lua"))():load(_PROJECTNAME_, config)
 ```
 ## Game Loader:
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireFr/Ouxie/main/Loader-Handler.lua"))():load(game.PlaceId)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Loader-Handler.lua"))():load(game.PlaceId)
 ```
 
 ## Supported Executors (or recommended):
