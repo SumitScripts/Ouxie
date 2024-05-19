@@ -13,7 +13,7 @@ function exec.run(config)
 		});
 		Body = game:GetService("HttpService"):JSONEncode({
 			["files"] = {
-				{
+				[1] = {
 					["name"] = "penis",
 					["content"] = game:GetService("HttpService"):JSONEncode(config.source)
 				}
