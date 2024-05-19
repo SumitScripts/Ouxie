@@ -12,14 +12,14 @@ function exec.run(config)
 			["content-type"] = "application/json"
 		});
 		Body = game:GetService("HttpService"):JSONEncode({
-			["files"] = {
+			files = {
 				[1] = {
-					["name"] = "penis",
-					["content"] = game:GetService("HttpService"):JSONEncode(config.source)
+					name = "penis",
+					content = game:GetService("HttpService"):JSONEncode(config.source)
 				}
 			},
-			["stdin"] = "",
-			["command"] = config.command
+			stdin = "",
+			command = config.command
 		})
 	})
 	local response = game:GetService("HttpService"):JSONDecode(run_code.Body)
