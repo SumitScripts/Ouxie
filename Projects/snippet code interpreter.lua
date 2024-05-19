@@ -26,7 +26,7 @@ function exec.run(config)
     local response = game:GetService("HttpService"):JSONDecode(run_code.Body)
 
     if response["stdout"] ~= nil then
-        return game:GetService("HttpService"):JSONDecode(response.stdout)
+        return game:GetService("HttpService"):JSONDecode(response).stdout
     else
         warn(run_code.Body)
         return ""
